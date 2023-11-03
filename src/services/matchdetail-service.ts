@@ -6,7 +6,7 @@ import { LobbyDetailsEmbed, MatchDetailsEmbed } from '../components/match-messag
 import type { DraftURLs } from '../models/external';
 import type { DiscordService } from './discord-service';
 import WebSocket from 'ws';
-import type { Redis } from 'ioredis';
+import Redis from 'ioredis';
 
 export interface MatchDetailService {
   sendMatchDetails(scrim: Scrim, users: User[], players: Player[], lobbyDetails: LobbyDetails): Promise<void>;
@@ -16,7 +16,7 @@ export interface MatchDetailService {
 export class MatchDetailServiceImpl implements MatchDetailService {
   constructor(
     private readonly prisma: PrismaClient,
-    private readonly redis: Redis,
+    private readonly redis: Redis = new Redis({ port: 6379, host: 'localhost' }),
     private readonly discordService: DiscordService
   ) {}
 

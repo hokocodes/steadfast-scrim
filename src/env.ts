@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { formatErrors } from './helpers/retrieveOptions';
+import 'dotenv/config';
 
 const envSchema = z.object({
   DISCORD_BOT_TOKEN: z.string(),
@@ -29,3 +30,4 @@ if (!res.success) {
 }
 
 export const env = res.data;
+console.log(process.env)
