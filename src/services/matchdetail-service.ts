@@ -1,5 +1,4 @@
-import type { LobbyDetails, Team } from '../models/matchmaking';
-import { ROLE_ORDER } from '../models/matchmaking';
+import { LobbyDetails, ROLE_ORDER, Team } from '../models/matchmaking';
 import type { Draft, Player, PrismaClient, Region, Scrim, User } from '@prisma/client';
 import { chance } from '../lib/chance';
 import { LobbyDetailsEmbed, MatchDetailsEmbed } from '../components/match-message';
