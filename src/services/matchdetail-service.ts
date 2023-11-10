@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/consistent-type-imports */
 import { LobbyDetails, ROLE_ORDER, Team } from '../models/matchmaking';
 import type { Draft, Player, PrismaClient, Region, Scrim, User } from '@prisma/client';
 import { chance } from '../lib/chance';

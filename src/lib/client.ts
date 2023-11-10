@@ -1,16 +1,20 @@
+import type {
+  RESTPutAPIApplicationCommandsResult} from 'discord.js';
 import {
   Client,
   Collection,
   Events,
   GatewayIntentBits,
   REST,
-  RESTPutAPIApplicationCommandsResult,
   Routes
 } from 'discord.js';
 import { readdirSync } from 'fs';
 import path from 'path';
 import { env } from '../env';
-import { SlashCommand } from '../types';
+import type { SlashCommand } from '../types';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export class ApplicationClient extends Client {
   private slashCommands = new Collection<string, SlashCommand>();

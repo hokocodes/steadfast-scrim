@@ -1,5 +1,6 @@
 import { chance } from '../lib/chance';
-// @ts-ignore
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import { EmbedBuilder } from 'discord.js';
 import type { Player, Scrim, User } from '@prisma/client';
 import type { GameSide, LobbyDetails } from '../models/matchmaking';

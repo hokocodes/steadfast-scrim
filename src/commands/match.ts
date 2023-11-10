@@ -3,7 +3,7 @@ import { discordService, redis, scrimService } from '..';
 import { env } from '../env';
 import { retrieveOptions } from '../helpers/retrieveOptions';
 import { MatchCommandInputSchema } from '../schemas/user';
-import { SlashCommand } from '../types';
+import type { SlashCommand } from '../types';
 import { capitalize } from '../utils/utils';
 
 const match: SlashCommand = {

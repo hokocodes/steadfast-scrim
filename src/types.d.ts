@@ -1,4 +1,4 @@
-import {
+import type {
   AutocompleteInteraction,
   ChatInputCommandInteraction,
   ClientEvents,
@@ -8,7 +8,7 @@ import {
   SlashCommandBuilder,
   SlashCommandSubcommandsOnlyBuilder
 } from 'discord.js';
-import { ApplicationClient } from './lib/client';
+import type { ApplicationClient } from './lib/client';
 
 export interface SlashCommand {
   command: SlashCommandBuilder | SlashCommandSubcommandsOnlyBuilder;
